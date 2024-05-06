@@ -1,7 +1,7 @@
 # Auto Email Sender Project
 auto_send_email_with_smtp
 
-This project contains two Python scripts, `encrypt_sender_emailinfo.py` and `auto_send_email.py`, which are used to automate the process of sending emails.
+This project contains two Python scripts, `encrypt_sender_emailinfo.py` and `auto_send_email.py`, which are used to automate the process of sending emails. The email can use gmail.com or outlook.com (hotmail.com).
 
 ## Prerequisites
 
@@ -16,6 +16,43 @@ You can install this package using pip:
 ```bash
 pip install -r requirements.txt
 ```
+
+## Enableing the SMTP service in your email account
+
+### Enabling Gmail SMTP Service
+
+1. Log into your Gmail account and click on the settings icon in the top right corner.
+2. In the settings page, select 'See all settings'.
+3. Click on 'Forwarding and POP/IMAP'.
+4. In the 'IMAP Access' section, select 'Enable IMAP'.
+5. Click on 'Save Changes'.
+
+SMTP Server Address: `smtp.gmail.com`
+
+For detailed steps, you can refer to the official Gmail support page [here](https://developers.google.com/gmail/imap/imap-smtp?hl=zh-tw).
+
+### Enabling Hotmail SMTP Service
+
+1. Log into your Hotmail account and click on the settings icon in the top right corner.
+2. In the settings page, select 'View all Outlook settings'.
+3. Click on 'Mail' and select 'Sync email'.
+
+SMTP Server Address: `smtp-mail.outlook.com`
+
+For detailed steps, you can refer to the official Hotmail support page [here](https://support.microsoft.com/zh-tw/office/outlook-com-%E7%9A%84-pop-imap-%E5%92%8C-smtp-%E8%A8%AD%E5%AE%9A-d088b986-291d-42b8-9564-9c414e2aa040).
+
+### Enabling Outlook Mail SMTP Service
+
+1. Open Outlook and go to 'File'.
+2. Click on 'Account Settings' and again on 'Account Settings'.
+3. Select your email account.
+4. Click on 'Server Settings'.
+
+SMTP Server Address: `smtp-mail.outlook.com`
+
+For detailed steps, you can refer to the official Outlook support page [here](https://support.microsoft.com/zh-tw/office/outlook-com-%E7%9A%84-pop-imap-%E5%92%8C-smtp-%E8%A8%AD%E5%AE%9A-d088b986-291d-42b8-9564-9c414e2aa040).
+
+Please note that these steps may change due to updates from the service providers. It is recommended to regularly check for the latest setup methods.
 
 ## encrypt_sender_emailinfo.py
 This script encrypts the sender’s email address and password. The encrypted credentials are then used by the `auto_send_email.py` script to send the email.
