@@ -18,7 +18,8 @@ pip install -r requirements.txt
 ```
 
 ## encrypt_sender_emailinfo.py
-This script encrypts the sender’s email address and password. The encrypted credentials are then used by the auto_send_email.py script to send the email.
+This script encrypts the sender’s email address and password. The encrypted credentials are then used by the `auto_send_email.py` script to send the email.
+You need to create the file`sender_info.txt` include your email address and password. This script will genereate the output file `sender_info_encrypt.txt`.
 
 Usage:
 
@@ -35,11 +36,15 @@ Optional arguments:
 ```
 
 ## auto_send_email.py
-This script sends an email with an optional attachment.
+This script sends an email with an optional attachment. 
+Attension: execute the `encrypt_sender_emailinfo.py` before this scropt!
+You need to add the email of receivers into a file named `receiver.list`. 
 
 Usage:
 ```bash
-./auto_send_email.py [-h] [--subject SUBJECT] [--body BODY] --sender SENDER
+auto_send_email.py [-h] [--subject SUBJECT] [--body BODY]
+                          [--sender SENDER] [--receiver RECEIVER] [--key KEY]
+                          [-a ATTACHMENT]
 ```
 
 Optional arguments:
@@ -54,12 +59,14 @@ Optional arguments:
 -a ATTACHMENT, --attachment ATTACHMENT: The file to be attached to the email.
 ```
 
-Installation
+## Installation
 1. Clone this repository.
 2. Install the required Python package: `pip install -r requirements.txt`
 3. Run the `encrypt_sender_emailinfo.py` script to encrypt your email credentials.
 4. Run the `auto_send_email.py` script to send an email.
-Contributing
+
+
+## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 
