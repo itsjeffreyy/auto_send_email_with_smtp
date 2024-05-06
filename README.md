@@ -1,5 +1,5 @@
-# auto_send_email_with_smtp
 # Auto Email Sender Project
+auto_send_email_with_smtp
 
 This project contains two Python scripts, `encrypt_sender_emailinfo.py` and `auto_send_email.py`, which are used to automate the process of sending emails.
 
